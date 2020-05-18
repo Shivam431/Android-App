@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical"
+    android:background="#354854"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#63CEC2"
+        android:fontFamily="monospace"
+        android:textSize="30dp"
+        android:text="Enter New Password"/>
+    <TextView
+        android:id="@+id/change_username"
+        android:layout_width="186dp"
+        android:layout_height="54dp"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:textAlignment="center"
+        android:text="ABC"
+        android:layout_marginTop="160dp" />
+
+    <EditText
+        android:id="@+id/change_password"
+        android:layout_width="185dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <EditText
+        android:id="@+id/change_confirm_password"
+        android:layout_width="181dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:hint="@string/confirm_password" />
+
+    <Button
+        android:id="@+id/change_button"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Change" />
+
+
+</LinearLayout>

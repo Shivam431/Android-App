@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:background="#354854 "
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="monospace"
+        android:textColor="#63CEC2"
+        android:text="Welcome ! Enter Details"/>
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="186dp"
+        android:layout_height="54dp"
+        android:background="#ffffff"
+        android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="185dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <EditText
+        android:id="@+id/register_confirm_password"
+        android:layout_width="181dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:hint="@string/confirm_password" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#63CEC2"
+        android:text="@string/register" />
+
+
+</LinearLayout>
