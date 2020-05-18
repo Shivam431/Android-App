@@ -2,41 +2,69 @@ package com.example.admin_demo;
 
 public class Books {
     private String author;
-
     private String title;
+    private String bookId;
+    private String category;
 
     // constructors
 
-    public Books() {}
+    public Books(String author,String title, String bookId,String category ) {
 
-    public Books(String username,String password) {
-
-        this.author = username;
-
-        this.title = password;
-
+        this.author = author;
+        this.title = title;
+        this.bookId=bookId;
+        this.category=category;
     }
 
     // properties
 
 
 
-    public String getUsername() {
+    public String getAuthor() {
 
         return this.author;
 
     }
 
-    public void setPassword(String password) {
+    public void setAuthor(String a) {
 
-        this. title= password;
+        this.author= a;
 
     }
 
-    public String getPassword() {
+    public String getTitle() {
 
         return this.title;
 
+    }
+
+    public void setTitle(String title) {
+
+        this.title= title;
+
+    }
+
+    public String getBookId() {
+
+        return this.bookId;
+
+    }
+
+    public void setBookId(String b) {
+
+        this.bookId= b;
+
+    }
+
+    public String getCategory() {
+
+        return this.category;
+
+    }
+
+    public void setCategory(String category) {
+
+        this.category= category;
     }
 
 }
