@@ -91,7 +91,7 @@ public void openList(String s)
                     List.add(title);
                 }
             }
-Log.d("called fun2","called fun2");
+
             ListView titleView=(ListView) findViewById(R.id.tList);
             ArrayAdapter<String> titAdapter = new ArrayAdapter<String>(BooksList.this, android.R.layout.simple_list_item_1, android.R.id.text1, List);
             titleView.setAdapter(titAdapter);
