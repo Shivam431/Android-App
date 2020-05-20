@@ -64,5 +64,14 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
+    }
+
+
+    public void openSearch(View view) {
+        Intent j=new Intent(getApplicationContext(),BooksList.class);
+        startActivity(j);
     }
 }

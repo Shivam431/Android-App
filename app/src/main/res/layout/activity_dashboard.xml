@@ -89,6 +89,21 @@
             android:textAlignment="center"
             android:textSize="30dp"
             android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="50"
+            android:textColor="#63CEC2"
+            android:fontFamily="cursive"
+            android:text="Search Book"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:onClick="openSearch"
+            />
     </LinearLayout>
 
     <!-- <LinearLayout
