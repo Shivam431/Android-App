@@ -42,7 +42,7 @@ public class BooksList extends AppCompatActivity {
                 for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
                     String cat = catSnapshot.child("category").getValue(String.class);
                     if (cat!=null && !categoryList.contains(cat)){
-                        categoryList.add(cat);
+                        categoryList.add(cat.trim().toUpperCase());
                     }
                 }
                 Spinner spinnerCat = (Spinner) findViewById(R.id.spL);
@@ -91,7 +91,7 @@ public void openList(String s)
                 String  title = catSnapshot.child("title").getValue(String.class) + " by " + catSnapshot.child("author").getValue(String.class) + "     Book Status: "+t;
 
                 if (title!=null){
-                    List.add(title);
+                    List.add(title.trim().toUpperCase());
                 }
             }
 
