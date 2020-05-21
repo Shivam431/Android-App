@@ -5,20 +5,29 @@ public class Books {
     private String title;
     private String bookId;
     private String category;
-
+private String issue_status;
     // constructors
 
-    public Books(String author,String title, String bookId,String category ) {
+    public Books(String author,String title, String bookId,String category,String issue_status ) {
 
         this.author = author;
         this.title = title;
         this.bookId=bookId;
         this.category=category;
+        this.issue_status=issue_status;
+
     }
 
     // properties
 
 
+    public String getIssue_status() {
+        return issue_status;
+    }
+
+    public void setIssue_status(String issue_status) {
+        this.issue_status = issue_status;
+    }
 
     public String getAuthor() {
 

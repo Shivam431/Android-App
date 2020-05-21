@@ -80,9 +80,17 @@ public class MainActivity extends AppCompatActivity {
                             if (dataSnapshot.hasChild(ed1.getText().toString())) {
                                 User user = dataSnapshot.child(ed1.getText().toString()).getValue(User.class);
                                 if (user.getPassword().compareTo(ed2.getText().toString()) == 0) {
-                                    Intent i = new Intent(getApplicationContext(), Dashboard.class);
-                                    i.putExtra("uname", ed1.getText().toString());
-                                    startActivity(i);
+                                    if(user.getUser_type().equalsIgnoreCase("student")) {
+                                        Intent i = new Intent(getApplicationContext(), Dashboard.class);
+                                        i.putExtra("uname", ed1.getText().toString());
+                                        startActivity(i);
+                                    }
+                                    else if(user.getUser_type().equalsIgnoreCase("admin"))
+                                    {
+                                        Intent i = new Intent(getApplicationContext(), Admin_Home.class);
+                                        i.putExtra("uname", ed1.getText().toString());
+                                        startActivity(i);
+                                    }
                                 } else
                                     Toast.makeText(getApplicationContext(), "Wrong Password", Toast.LENGTH_SHORT).show();
 

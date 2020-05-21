@@ -86,7 +86,9 @@ public void openList(String s)
             final List<String> List = new ArrayList<String>();
 
             for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
-                String title = catSnapshot.child("title").getValue(String.class)+" by "+catSnapshot.child("author").getValue(String.class);
+
+                String  title = catSnapshot.child("title").getValue(String.class) + " by " + catSnapshot.child("author").getValue(String.class) + "     Book Status: "+catSnapshot.child("issue_status").getValue(String.class);
+
                 if (title!=null){
                     List.add(title);
                 }
