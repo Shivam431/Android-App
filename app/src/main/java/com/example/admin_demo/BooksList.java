@@ -2,6 +2,7 @@ package com.example.admin_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -86,8 +87,8 @@ public void openList(String s)
             final List<String> List = new ArrayList<String>();
 
             for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
-
-                String  title = catSnapshot.child("title").getValue(String.class) + " by " + catSnapshot.child("author").getValue(String.class) + "     Book Status: "+catSnapshot.child("issue_status").getValue(String.class);
+                 String t= catSnapshot.child("issue_status").getValue(String.class).equalsIgnoreCase("false")?"Availabile":"Not-Available";
+                String  title = catSnapshot.child("title").getValue(String.class) + " by " + catSnapshot.child("author").getValue(String.class) + "     Book Status: "+t;
 
                 if (title!=null){
                     List.add(title);
