@@ -6,16 +6,18 @@ public class User {
     private String username;
 
     private String password;
+    private String user_type;
 
     // constructors
 
     public User() {}
 
-    public User(String username,String password) {
+    public User(String username,String password,String user_type) {
 
         this.username = username;
 
         this.password = password;
+        this.user_type=user_type;
 
     }
 
@@ -45,4 +47,11 @@ public class User {
 
     }
 
+    public void setUser_type(String user_type) {
+        this.user_type = user_type;
+    }
+
+    public String getUser_type() {
+        return user_type;
+    }
 }

@@ -30,7 +30,7 @@ Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        final String s="student";
         final EditText e1=(EditText)findViewById(R.id.register_username);
         final EditText e2=(EditText)findViewById(R.id.register_password);
         final EditText e3=(EditText)findViewById(R.id.register_confirm_password);
@@ -68,7 +68,7 @@ Register extends AppCompatActivity {
                         if(userRef==null) {
                             mRootRef = FirebaseDatabase.getInstance().getReference();
 
-                            mRootRef.child("users").child(e1.getText().toString()).setValue(new User(e1.getText().toString(), e2.getText().toString()));
+                            mRootRef.child("users").child(e1.getText().toString()).setValue(new User(e1.getText().toString(), e2.getText().toString(),s));
 
                             Toast.makeText(getApplicationContext(), "Registration Sucessfull", Toast.LENGTH_SHORT).show();
 
@@ -92,7 +92,7 @@ Register extends AppCompatActivity {
                                     }
                                     if(k==0)
                                     {
-                                        userRef.child(e1.getText().toString()).setValue(new User(e1.getText().toString(), e2.getText().toString()));
+                                        userRef.child(e1.getText().toString()).setValue(new User(e1.getText().toString(), e2.getText().toString(),s));
                                         Toast.makeText(getApplicationContext(), "Registration Sucessfull", Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(i);
