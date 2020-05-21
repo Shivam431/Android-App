@@ -7,6 +7,8 @@ public class User {
 
     private String password;
 
+    private String user_type="student";
+
     // constructors
 
     public User() {}

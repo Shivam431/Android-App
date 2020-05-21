@@ -34,14 +34,14 @@ public class Dashboard extends AppCompatActivity {
 
             }
         });
-       /* qa.setOnClickListener(new View.OnClickListener() {
+        qa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent qaIntent = new Intent(Dashboard.this, BooksActivity.class);
+                Intent qaIntent = new Intent(Dashboard.this, BooksList.class);
                 qaIntent.putExtra("uname",uname);
                 startActivity(qaIntent);
 
             }
-        });*/
+        });
        /* quiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent quizIntent = new Intent(Dashboard.this, CreateQuiz.class);

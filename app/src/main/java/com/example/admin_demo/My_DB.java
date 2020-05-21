@@ -24,6 +24,8 @@ public class My_DB extends SQLiteOpenHelper {
 
     public static final String COLUMN_password = "Password";
 
+    
+
     //initialize the database
 
     public My_DB(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
