@@ -67,29 +67,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="50"
-            android:textColor="#63CEC2"
-            android:fontFamily="cursive"
             android:drawableBottom="@drawable/profile"
-            android:text="PROFILE"
+            android:fontFamily="cursive"
+            android:text="Profile"
             android:textAlignment="center"
+            android:textColor="#63CEC2"
             android:textSize="30dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/qa"
-            android:layout_width="134dp"
+            android:id="@+id/ab"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="50"
-            android:textColor="#63CEC2"
-            android:fontFamily="cursive"
-            android:drawableBottom="@drawable/qa"
-            android:text="search books"
-            android:textAlignment="center"
             android:textSize="30dp"
-            android:textStyle="bold"/>
-
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:text="AddBooks" />
     </LinearLayout>
 
     <!-- <LinearLayout

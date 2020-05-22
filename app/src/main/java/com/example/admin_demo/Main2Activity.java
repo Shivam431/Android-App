@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),username,Toast.LENGTH_SHORT).show();
 
         final DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users");
-
+        final String s="student";
         final EditText e2=(EditText)findViewById(R.id.change_password);
         final EditText e3=(EditText)findViewById(R.id.change_confirm_password);
         Button b=(Button)findViewById(R.id.change_button);
@@ -43,7 +43,7 @@ public class Main2Activity extends AppCompatActivity {
 
                     else {
 
-                        userRef.child(username).setValue(new User(username, e2.getText().toString()));
+                        userRef.child(username).setValue(new User(username, e2.getText().toString(),s));
 
                         Toast.makeText(getApplicationContext(), "Password Changed", Toast.LENGTH_SHORT).show();
 

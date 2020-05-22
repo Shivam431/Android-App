@@ -40,14 +40,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                /* My_DB dbHandler = new My_DB(getApplicationContext(), null, null, 1);
-
                 User user = dbHandler.findHandler(ed1.getText().toString());
-
                 if (user != null) {
-
                     Log.v("Pass from db",user.getPassword());
                     Log.v("Pass from user",ed2.getText().toString());
-
                     if(user.getPassword().equals(ed2.getText().toString()))
                     {
                         Intent i=new Intent(getApplicationContext(),Dashboard.class);
@@ -55,16 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                         Toast.makeText(getApplicationContext(),"Wrong Password",Toast.LENGTH_SHORT).show();
-
-
                 } else {
-
                     Toast.makeText(getApplicationContext(),"User Not found",Toast.LENGTH_SHORT).show();
-
                     ed1.setText("");
-
                     ed2.setText("");
-
                 }*/
 
                 if (ed1.getText().toString().isEmpty() || ed2.getText().toString().isEmpty())
@@ -80,9 +70,17 @@ public class MainActivity extends AppCompatActivity {
                             if (dataSnapshot.hasChild(ed1.getText().toString())) {
                                 User user = dataSnapshot.child(ed1.getText().toString()).getValue(User.class);
                                 if (user.getPassword().compareTo(ed2.getText().toString()) == 0) {
-                                    Intent i = new Intent(getApplicationContext(), Dashboard.class);
-                                    i.putExtra("uname", ed1.getText().toString());
-                                    startActivity(i);
+                                    if(user.getUser_type().equalsIgnoreCase("student")) {
+                                        Intent i = new Intent(getApplicationContext(), Dashboard.class);
+                                        i.putExtra("uname", ed1.getText().toString());
+                                        startActivity(i);
+                                    }
+                                    else if(user.getUser_type().equalsIgnoreCase("admin"))
+                                    {
+                                        Intent i = new Intent(getApplicationContext(), Admin_Home.class);
+                                        i.putExtra("uname", ed1.getText().toString());
+                                        startActivity(i);
+                                    }
                                 } else
                                     Toast.makeText(getApplicationContext(), "Wrong Password", Toast.LENGTH_SHORT).show();
 
@@ -114,17 +112,11 @@ public class MainActivity extends AppCompatActivity {
        b1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-
                    My_DB dbHandler = new My_DB(getApplicationContext(), null, null, 1);
-
                    tv.setText(dbHandler.loadHandler());
-
                    ed1.setText("");
-
                    ed2.setText("");
-
                }
-
        });*/
     }
 }

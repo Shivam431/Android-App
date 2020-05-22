@@ -39,21 +39,18 @@ public class Dashboard extends AppCompatActivity {
                 Intent qaIntent = new Intent(Dashboard.this, BooksList.class);
                 qaIntent.putExtra("uname",uname);
                 startActivity(qaIntent);
-
             }
         });
        /* quiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent quizIntent = new Intent(Dashboard.this, CreateQuiz.class);
                 startActivity(quizIntent);
-
             }
         });
         pquiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent pquizIntent = new Intent(Dashboard.this, PlayQuiz.class);
                 startActivity(pquizIntent);
-
             }
         });*/
 
@@ -64,5 +61,14 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
     }
+
+
+   /* public void openSearch(View view) {
+        Intent j=new Intent(getApplicationContext(),BooksList.class);
+        startActivity(j);
+    }*/
 }
