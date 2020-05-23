@@ -5,7 +5,7 @@ public class Issue {
     private String Student;
     private String date;
 
-   public Issue(String BookId,String student,String date)
+   public Issue(String BookId,String date ,String student)
     {
         this.BookId=BookId;
         this.Student=student;
