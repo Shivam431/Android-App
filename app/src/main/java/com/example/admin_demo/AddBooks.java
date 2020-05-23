@@ -33,7 +33,7 @@ public class AddBooks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_books_add);
+        setContentView(R.layout.activity_add_books);
         Intent i = getIntent();
         //final String username = i.getStringExtra("uname");
         final EditText ed1 = (EditText) findViewById(R.id.bid);

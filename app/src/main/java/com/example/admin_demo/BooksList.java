@@ -79,6 +79,7 @@ public class BooksList extends AppCompatActivity {
     {
         DatabaseReference book = FirebaseDatabase.getInstance().getReference("books");
         Query query = book.orderByChild("category").equalTo(s);
+
         query.addListenerForSingleValueEvent(new ValueEventListener() {
 
 
