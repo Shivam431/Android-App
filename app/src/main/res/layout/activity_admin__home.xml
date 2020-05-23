@@ -85,6 +85,16 @@
             android:fontFamily="cursive"
             android:textStyle="bold"
             android:text="AddBooks" />
+        <TextView
+            android:id="@+id/issueBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="50"
+            android:textSize="30dp"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:text="Issue Book" />
     </LinearLayout>
 
     <!-- <LinearLayout

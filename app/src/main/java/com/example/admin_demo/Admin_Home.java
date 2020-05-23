@@ -20,6 +20,7 @@ public class Admin_Home extends AppCompatActivity {
         final TextView profile = (TextView) findViewById(R.id.profile);
         Button logout=(Button)findViewById(R.id.logout);
         final TextView AddBook=(TextView)findViewById(R.id.ab);
+        final TextView issueBook=(TextView)findViewById(R.id.issueBook);
         profile.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent profileIntent = new Intent(Admin_Home.this, Profile.class);
@@ -40,6 +41,13 @@ public class Admin_Home extends AppCompatActivity {
                 Intent addint = new Intent(Admin_Home.this,AddBooks.class);
                 addint.putExtra("uname",uname);
                 startActivity(addint);
+
+            }
+        });
+        issueBook.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent t = new Intent(Admin_Home.this,BookIssue.class);
+                startActivity(t);
 
             }
         });
