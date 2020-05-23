@@ -84,7 +84,7 @@ public class AddBooks extends AppCompatActivity {
 
                    mRootRef.child("books").child(String.valueOf(k1 + 1)).setValue(new Books(ed1.getText().toString(), ed2.getText().toString(),ed3.getText().toString(),ed4.getText().toString(),"False"));
 
-                   Toast.makeText(getApplicationContext(), "Registration Sucessfull", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(), "Books Added ", Toast.LENGTH_SHORT).show();
                }
                else
                    {
