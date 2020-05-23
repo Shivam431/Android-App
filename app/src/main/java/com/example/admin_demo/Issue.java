@@ -4,12 +4,15 @@ public class Issue {
     private String BookId;
     private String Student;
     private String date;
+    private String return_date;
 
-   public Issue(String BookId,String date ,String student)
+   public Issue(String BookId,String date ,String return_date,String student)
     {
+
         this.BookId=BookId;
-        this.Student=student;
         this.date=date;
+        this.return_date=return_date;
+        this.Student=student;
     }
 
     public String getBookId() {
@@ -34,5 +37,13 @@ public class Issue {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getReturn_date() {
+        return return_date;
+    }
+
+    public void setReturn_date(String return_date) {
+        this.return_date = return_date;
     }
 }
