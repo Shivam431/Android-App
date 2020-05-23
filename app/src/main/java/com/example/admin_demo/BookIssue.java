@@ -49,9 +49,10 @@ public class BookIssue extends AppCompatActivity {
                 String studentName= sp1.getSelectedItem().toString();
                 String  bookId=t1.getText().toString();
                 String formattedDate = df.format(c);
+                String p="pending";
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference fDatabaseRoot= database.getReference();
-                fDatabaseRoot.child("issue").child(bookId).setValue(new Issue(bookId,formattedDate,studentName));
+                fDatabaseRoot.child("issue").child(bookId).setValue(new Issue(bookId,formattedDate,p,studentName));
 
 
                 final DatabaseReference bup = FirebaseDatabase.getInstance().getReference("books");

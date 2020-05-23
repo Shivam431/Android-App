@@ -51,5 +51,13 @@ public class Admin_Home extends AppCompatActivity {
 
             }
         });
+        final TextView subBook=(TextView)findViewById(R.id.subBook);
+        subBook.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent t = new Intent(Admin_Home.this,BookSubmission.class);
+                startActivity(t);
+
+            }
+        });
     }
 }
