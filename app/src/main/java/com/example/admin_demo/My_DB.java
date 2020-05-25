@@ -24,6 +24,8 @@ public class My_DB extends SQLiteOpenHelper {
 
     public static final String COLUMN_password = "Password";
 
+    public static final String CaOLUMN_EMAIL="user_id";
+
     
 
     //initialize the database

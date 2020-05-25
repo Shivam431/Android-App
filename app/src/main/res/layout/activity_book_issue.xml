@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#354854 "
     tools:context=".BookIssue">
 
 
@@ -25,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Issue Book"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="36sp" />
         </TableRow>
 
@@ -54,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Category"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="18sp" />
 
             <Spinner
@@ -71,6 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Book"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="18sp" />
 
             <Spinner
@@ -88,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Student"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="18sp" />
 
             <Spinner
@@ -109,7 +113,9 @@
                 android:layout_marginLeft="141dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="305dp"
-                android:text="Issue" />
+                android:background="#63CEC2"
+                android:text="Issue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
         </TableRow>
     </TableLayout>
 
@@ -118,6 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="50dp" />
+        tools:layout_editor_absoluteY="50dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

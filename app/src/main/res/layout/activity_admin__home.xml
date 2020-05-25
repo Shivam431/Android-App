@@ -69,7 +69,6 @@
             android:layout_weight="50"
             android:drawableBottom="@drawable/profile"
             android:fontFamily="cursive"
-            android:text="Profile"
             android:textAlignment="center"
             android:textColor="#63CEC2"
             android:textSize="30dp"
@@ -81,30 +80,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="50"
-            android:textSize="30dp"
+            android:drawableBottom="@drawable/add1"
             android:fontFamily="cursive"
-            android:textStyle="bold"
-            android:text="AddBooks" />
+            android:textColor="#63CEC2"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/issueBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="50"
-            android:textSize="30dp"
+            android:drawableBottom="@drawable/issue"
             android:fontFamily="cursive"
-            android:textStyle="bold"
-            android:text="Issue Book" />
+            android:textColor="#63CEC2"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/subBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="50"
-            android:textSize="30dp"
+            android:drawableBottom="@drawable/submit"
             android:fontFamily="cursive"
-            android:textStyle="bold"
-            android:text="Submit Book" />
+            android:textColor="#63CEC2"
+            android:textSize="30dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- <LinearLayout

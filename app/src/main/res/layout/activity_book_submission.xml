@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#354854 "
     tools:context=".BookSubmission">
     <TableLayout
         android:layout_width="wrap_content"
@@ -23,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit Book"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="36sp" />
         </TableRow>
 
@@ -52,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Student"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="18sp" />
 
             <Spinner
@@ -69,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Book"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="18sp" />
 
             <Spinner
@@ -76,19 +79,23 @@
                 android:layout_width="150dp"
                 android:layout_height="28dp" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="345dp">
 
             <Button
                 android:id="@+id/submit"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="141dp"
                 android:layout_marginLeft="141dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="305dp"
-                android:text="Submit" />
+                android:background="#63CEC2"
+                android:text="Submit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
         </TableRow>
     </TableLayout>
 
