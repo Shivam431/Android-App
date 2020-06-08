@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/au"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:text="Author"
+            />
+
+        <TextView
+            android:id="@+id/b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:text="Book id"
+            android:layout_below="@id/au"
+            />
+
+        <TextView
+            android:id="@+id/c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:text="Category"
+            android:layout_below="@id/b"
+            />
+        <TextView
+            android:id="@+id/i"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:text="Issue_Status"
+            android:layout_below="@id/c"
+            />
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:text="Title"
+            android:layout_below="@id/i"
+            />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
