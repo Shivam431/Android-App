@@ -42,7 +42,7 @@ public class Profile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot users:dataSnapshot.getChildren())
                 {
-                    User user=users.getValue(User.class);
+                    User user = users.getValue(User.class);
                     if(user.getUsername().compareTo(username)==0)
                     {
                         tv2.setText("Password is : "+user.getPassword());

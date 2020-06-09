@@ -65,7 +65,15 @@ public class Dashboard extends AppCompatActivity {
 
 
     }
+ public void openShelf(View v)
+ {
+     Intent i=getIntent();
+     final String uname=i.getStringExtra("uname");
+     Intent j = new Intent(getApplicationContext(), RecyclerViewA.class);
+     j.putExtra("uname", uname);
+     startActivity(j);
 
+ }
 
    /* public void openSearch(View view) {
         Intent j=new Intent(getApplicationContext(),BooksList.class);

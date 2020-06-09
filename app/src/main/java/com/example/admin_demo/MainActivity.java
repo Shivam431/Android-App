@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (user.getPassword().compareTo(ed2.getText().toString()) == 0) {
                                     if(user.getUser_type().equalsIgnoreCase("student")) {
                                         Intent i = new Intent(getApplicationContext(), Dashboard.class);
-                                      // Intent i = new Intent(getApplicationContext(), RecyclerViewA.class);
+                                       //Intent i = new Intent(getApplicationContext(), RecyclerViewA.class);
                                         i.putExtra("uname", ed1.getText().toString());
                                         startActivity(i);
                                     }

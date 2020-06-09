@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +30,8 @@ public class RecyclerViewA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        //Intent i=getIntent();
-      //  final String uname=i.getStringExtra("uname");
+        Intent i=getIntent();
+      final String uname=i.getStringExtra("uname");
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("books");
         recyclerView =(RecyclerView)findViewById(R.id.rv);
@@ -49,12 +50,20 @@ public class RecyclerViewA extends AppCompatActivity {
         recyclerAdapter = new FirebaseRecyclerAdapter<Category, CategoryViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull CategoryViewHolder holder, int position, @NonNull Category model) {
+                holder.author.setText("Author        : "+model.getAuthor());
+                 holder.booId.setText("Book Id       : "+model.getBookId());
+                   holder.cat.setText("Book Category : "+model.getCategory());
+                 holder.title.setText("Book Title    : "+model.getTitle());
+                             String s="Status        : Available";
+                if(model.getIssue_status().equalsIgnoreCase("true"))
+                {
+                    s="Status        : Not Available";
+                    holder.issue_status.setBackgroundColor(Color.RED);
 
-                holder.author.setText(model.getAuthor());
-                holder.booId.setText(model.getBookId());
-                holder.cat.setText(model.getCategory());
-                holder.issue_status.setText(model.getIssue_status());
-                holder.title.setText((model.getTitle()));
+                }
+                holder.issue_status.setText(s);
+
+
 
 
             }
