@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile"
-    android:background="#354854"
+    android:background="@drawable/gradient_animated"
+    android:id="@+id/layout5"
     android:orientation="vertical">
 
     <TextView

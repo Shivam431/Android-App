@@ -2,12 +2,14 @@ package com.example.admin_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -106,5 +108,10 @@ public class BooksList extends AppCompatActivity {
 
             }
         });
+       /* LinearLayout linearLayout = findViewById(R.id.layout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();*/
     }
 }

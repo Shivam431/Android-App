@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layout"
     tools:context=".Dashboard"
     android:orientation="vertical"
-    android:background="#354854 ">
+    android:background="@drawable/gradient_animated">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -87,14 +88,13 @@
                     android:textColor="#63CEC2"
                     android:textSize="30dp"
                     android:textStyle="bold" />
-
                 <TextView
                     android:id="@+id/qa"
                     android:layout_width="115dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="50"
-                    android:drawableBottom="@drawable/search"
+                    android:drawableBottom="@drawable/look"
                     android:fontFamily="cursive"
                     android:textAlignment="center"
                     android:textColor="#63CEC2"
@@ -108,19 +108,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="174dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableBottom="@drawable/quiz"
-                    android:onClick="openShelf" />
-            </LinearLayout>
+                android:layout_weight="1"
+                android:drawableBottom="@drawable/shelf"
+                android:onClick="openShelf" />
         </TableRow>
 
         <TableRow

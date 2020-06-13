@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Register"
     android:orientation="vertical"
-    android:background="#354854"
+    android:background="@drawable/gradient_animated"
+    android:id="@+id/layout4"
     android:gravity="center_horizontal">
     <TextView
         android:layout_width="wrap_content"

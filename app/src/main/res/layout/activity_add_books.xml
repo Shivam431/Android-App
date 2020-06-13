@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#354854 "
+    android:background="@drawable/gradient_animated"
+    android:id="@+id/layout1"
     tools:context=".AddBooks">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="id"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +37,7 @@
         android:layout_marginTop="92dp"
         android:text="Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bid" />
@@ -60,7 +61,7 @@
         android:layout_marginTop="104dp"
         android:text="Category"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Tid" />
@@ -72,7 +73,7 @@
         android:layout_marginTop="100dp"
         android:text="Author"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Cid" />

@@ -3,9 +3,11 @@ package com.example.admin_demo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Admin_Home extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class Admin_Home extends AppCompatActivity {
         final String uname=i.getStringExtra("uname");
 
         setContentView(R.layout.activity_admin__home);
+
         final TextView profile = (TextView) findViewById(R.id.profile);
         Button logout=(Button)findViewById(R.id.logout);
         final TextView AddBook=(TextView)findViewById(R.id.ab);
@@ -59,5 +62,6 @@ public class Admin_Home extends AppCompatActivity {
 
             }
         });
+
     }
 }

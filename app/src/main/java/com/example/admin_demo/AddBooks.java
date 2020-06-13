@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +37,7 @@ public class AddBooks extends AppCompatActivity {
 
         setContentView(R.layout.activity_add_books);
         Intent i = getIntent();
+
         //final String username = i.getStringExtra("uname");
         final EditText ed1 = (EditText) findViewById(R.id.bid);
         final EditText ed2 = (EditText) findViewById(R.id.tid);
@@ -125,6 +128,11 @@ public class AddBooks extends AppCompatActivity {
                    }
            }
        });
+      /*  LinearLayout linearLayout = findViewById(R.id.layout1);
+        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();*/
     }
 
     }
