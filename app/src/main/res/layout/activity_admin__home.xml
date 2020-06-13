@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Dashboard"
     android:orientation="vertical"
-    android:background="#354854 ">
+    android:background="@drawable/gradient_animated">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
