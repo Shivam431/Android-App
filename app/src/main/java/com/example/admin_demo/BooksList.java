@@ -91,7 +91,7 @@ public class BooksList extends AppCompatActivity {
 
                 for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
                     String t= catSnapshot.child("issue_status").getValue(String.class).equalsIgnoreCase("false")?" Available":" Not-Available";
-                    String  title = catSnapshot.child("title").getValue(String.class) + " by " + catSnapshot.child("author").getValue(String.class) + "     Book Status: "+t;
+                    String  title = "\n\n\nTitle : "+catSnapshot.child("title").getValue(String.class) + "\n\nAuthor : " + catSnapshot.child("author").getValue(String.class) +"\n\nBook Status: "+t+"\n\n\n";
 
                     if (title!=null){
                         List.add(title);
@@ -101,6 +101,7 @@ public class BooksList extends AppCompatActivity {
                 ListView titleView=(ListView) findViewById(R.id.tList);
                 ArrayAdapter<String> titAdapter = new ArrayAdapter<String>(BooksList.this, android.R.layout.simple_list_item_1, android.R.id.text1, List);
                 titleView.setAdapter(titAdapter);
+
             }
 
             @Override

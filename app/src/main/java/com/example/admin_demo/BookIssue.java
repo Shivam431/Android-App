@@ -77,7 +77,7 @@ public class BookIssue extends AppCompatActivity {
                 });
                 Toast.makeText(getApplicationContext(), "Book Issued", Toast.LENGTH_SHORT).show();
 
-                Intent t = new Intent(BookIssue.this,BookIssue.class);
+                Intent t = new Intent(BookIssue.this,Admin_Home.class);
                 startActivity(t);
             }
         });
@@ -101,11 +101,10 @@ public class BookIssue extends AppCompatActivity {
                     }
                 }
 
-
-                Spinner spinnerStu = (Spinner) findViewById(R.id.stuL);
-                ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookIssue.this, android.R.layout.simple_spinner_item, ListS);
-                stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerStu.setAdapter(stuAdapter);
+    Spinner spinnerStu = (Spinner) findViewById(R.id.stuL);
+    ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookIssue.this, android.R.layout.simple_spinner_item, ListS);
+    stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    spinnerStu.setAdapter(stuAdapter);
 
             }
 
@@ -122,33 +121,33 @@ public class BookIssue extends AppCompatActivity {
 
                 final List<String> categoryList = new ArrayList<String>();
 
-                for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot catSnapshot : dataSnapshot.getChildren()) {
                     String cat = catSnapshot.child("category").getValue(String.class);
-                    if (cat!=null && !categoryList.contains(cat)){
+                    if (cat != null && !categoryList.contains(cat)) {
                         categoryList.add(cat);
                     }
                 }
-                Spinner spinnerCat = (Spinner) findViewById(R.id.categ);
-                ArrayAdapter<String> catAdapter = new ArrayAdapter<String>(BookIssue.this, android.R.layout.simple_spinner_item, categoryList);
-                catAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerCat.setAdapter(catAdapter);
+
+                    Spinner spinnerCat = (Spinner) findViewById(R.id.categ);
+                    ArrayAdapter<String> catAdapter = new ArrayAdapter<String>(BookIssue.this, android.R.layout.simple_spinner_item, categoryList);
+                    catAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinnerCat.setAdapter(catAdapter);
 
 
+                    spinnerCat.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            // Your code here
 
+                            String bk = categoryList.get(i);
+                            openList(bk);
 
-                spinnerCat.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Your code here
+                        }
 
-                        String bk=categoryList.get(i);
-                        openList(bk);
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                            return;
+                        }
+                    });
 
-                    }
-
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-                        return;
-                    }
-                });
             }
 
             @Override

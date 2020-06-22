@@ -34,13 +34,6 @@ public class BookSubmission extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_submission);
 
-
-
-
-
-
-
-
         Button btn=(Button)findViewById(R.id.submit);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -92,9 +85,9 @@ public class BookSubmission extends AppCompatActivity {
                     }
                 });
                 Toast.makeText(getApplicationContext(), "Book Submitted", Toast.LENGTH_SHORT).show();
-
-                Intent t = new Intent(BookSubmission.this,BookSubmission.class);
+                Intent t = new Intent(BookSubmission.this,Admin_Home.class);
                 startActivity(t);
+
             }
         });
 
@@ -111,34 +104,40 @@ public class BookSubmission extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 final List<String> ListS = new ArrayList<String>();
 
-                for (DataSnapshot catSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot catSnapshot : dataSnapshot.getChildren()) {
 
-                    String  title = catSnapshot.child("student").getValue(String.class);
-                    if (title!=null && !ListS.contains(title)){
+                    String title = catSnapshot.child("student").getValue(String.class);
+                    if (title != null && !ListS.contains(title)) {
                         ListS.add(title);
                     }
                 }
 
+                if (!ListS.isEmpty()) {
+                    Spinner spinnerStu = (Spinner) findViewById(R.id.StudentList);
+                    ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookSubmission.this, android.R.layout.simple_spinner_item, ListS);
+                    stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinnerStu.setAdapter(stuAdapter);
 
-                Spinner spinnerStu = (Spinner) findViewById(R.id.StudentList);
-                ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookSubmission.this, android.R.layout.simple_spinner_item, ListS);
-                stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerStu.setAdapter(stuAdapter);
-                spinnerStu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Your code here
+                    spinnerStu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            // Your code here
 
-                        String bk=ListS.get(i);
-                        openList(bk);
+                            String bk = ListS.get(i);
+                            openList(bk);
 
-                    }
+                        }
 
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-                        return;
-                    }
-                });
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                            return;
+                        }
+                    });
+                }else
+                {
+                    Toast.makeText(getApplicationContext(), "No student in issues list", Toast.LENGTH_SHORT).show();
+                    Intent t = new Intent(BookSubmission.this,Admin_Home.class);
+                    startActivity(t);
+                }
             }
-
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -168,12 +167,17 @@ public class BookSubmission extends AppCompatActivity {
                     }
                 }
 
-
-                Spinner spinnerStu = (Spinner) findViewById(R.id.BookIdList);
-                ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookSubmission.this, android.R.layout.simple_spinner_item, ListS);
-                stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerStu.setAdapter(stuAdapter);
-
+                  if(!ListS.isEmpty()) {
+                      Spinner spinnerStu = (Spinner) findViewById(R.id.BookIdList);
+                      ArrayAdapter<String> stuAdapter = new ArrayAdapter<String>(BookSubmission.this, android.R.layout.simple_spinner_item, ListS);
+                      stuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                      spinnerStu.setAdapter(stuAdapter);
+                  }else
+                  {
+                      Toast.makeText(getApplicationContext(), "No student in issues list", Toast.LENGTH_SHORT).show();
+                      Intent t = new Intent(BookSubmission.this,Admin_Home.class);
+                      startActivity(t);
+                  }
             }
 
             @Override
@@ -181,11 +185,6 @@ public class BookSubmission extends AppCompatActivity {
 
             }
         });
-        /*LinearLayout linearLayout = findViewById(R.id.layout3);
-        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();*/
 
     }
 }
