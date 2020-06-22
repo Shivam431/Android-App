@@ -8,14 +8,12 @@ public class Books {
     private String issue_status;
     // constructors
 
-    public Books(String bookId,String title, String category,String author,String issue_status) {
-        this.bookId=bookId;
-        this.title = title;
-        this.category=category;
+    public Books(String author,String title, String bookId,String category,String issue_status) {
+
         this.author = author;
-
-
-
+        this.title = title;
+        this.bookId=bookId;
+        this.category=category;
         this.issue_status=issue_status;
 
     }
